@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./assets/img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>jungle-time</title>
+</head>
+
+<body data-bs-theme="light">
+  <!-- SECTION -->
+  <header>
+    <nav class="navbar bg-codeworks text-light gap-2 px-2">
+      <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
+      <div><b>jungle-time</b></div>
+      <div class="ms-auto" id="authstate"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>Play Place</h1>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="fw-bold fs-1 card-header text-center"> Jumble Time baby</div>
+            <div id="jumbleList" class="mt-2 p-2">
+              <!-- <div>
+                <span>
+                  <button>start</button>
+                </span>
+                <span>🐒</span>
+                <span>jumble</span>
+              </div> -->
+            </div>
+            <hr>
+            <div>
+              <h3 class="text-center mt-4">Create Jumble</h3>
+            </div>
+
+            <form onsubmit="app.jumbleController.createJumble()" class="ms-2 mb-2">
+              <div class="p-2">
+                <label for="name" class="fs-3">name</label>
+                <input id="name" type="text" name="name">
+              </div>
+              <div>
+                <label for="Jumble" class="fs-3">Jumble</label>
+                <input id="Jumble" type="text" name="body">
+              </div>
+              <div class="text-center p-3">
+                <button type="submit" class="btn btn-warning text-center">Create</button>
+              </div>
+
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-bg-dark">
+    <div class="text-center">
+      <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by CodeWorks</small></p>
+    </div>
+  </footer>
+
+  <!-- SECTION links for bootstrap, axios, and auth -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/Auth0Provider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- The start of our javascript -->
+  <script src="app/App.js" type="module"></script>
+</body>
+
+</html>
