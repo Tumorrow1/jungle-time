@@ -5,6 +5,7 @@ import { getFormData } from "../utils/FormHandler.js";
 export class JumbleController {
   constructor() {
     AppState.on(`jumble`, this.drawJumbleList)
+    AppState.on(`activeJumble`, this.drawActiveJumble)
     console.log(`hi`);
     this.drawJumbleList()
   }
@@ -21,8 +22,20 @@ export class JumbleController {
     const jumbleData = getFormData(formElm)
     console.log(`jungle data`, jumbleData);
     jumbleServices.createJumble(jumbleData)
+  }
 
+  selectActiveJumble(jumbleDateId) {
+    jumbleServices.setActiveJumble(jumbleDateId)
+
+  }
+
+  drawActiveJumble() {
+    document.getElementById(`name`).innerText = AppState.activeJumble.name
+    document.getElementById(`body`).innerText = AppState.activeJumble.body
+    console.log(`hiooh`);
 
 
   }
+
+
 }

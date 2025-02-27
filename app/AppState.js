@@ -6,12 +6,14 @@ class ObservableAppState extends EventEmitter {
 
   jumble = [
     new jumble({
-      name: `🐒`, body: `monkey go's bananas`
+      name: `🐒 Mike `, body: `monkey go's bananas`
     }),
 
-    new jumble({ name: `🦒`, body: `loves them leaves` }),
-    new jumble({ name: `🐻`, body: `time for fish` }),
+    new jumble({ name: `🦒 Jeff`, body: `loves them leaves` }),
+    new jumble({ name: `🐻 Berry`, body: `time for fish` }),
   ]
+
+  activeJumble = null
 
 }
 export const AppState = createObservableProxy(new ObservableAppState())
