@@ -12,6 +12,18 @@ class JumbleServices {
     AppState.activeJumble = AppState.jumble.find(jumblearray => jumblearray.id == id)
   }
 
+  createCheckSubmit() {
+    if (document.getElementById(`content`).value == AppState.activeJumble.body) {
+      console.log(`you win`);
+
+    }
+
+    else {
+      console.log(`you lose`);
+
+    }
+
+  }
 }
 
 export const jumbleServices = new JumbleServices()

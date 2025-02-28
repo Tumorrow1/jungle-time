@@ -32,9 +32,16 @@ export class JumbleController {
   drawActiveJumble() {
     document.getElementById(`name`).innerText = AppState.activeJumble.name
     document.getElementById(`body`).innerText = AppState.activeJumble.body
+    document.getElementById(`jumbleContent`).classList.remove(`d-none`)
     console.log(`hiooh`);
 
 
+  }
+  checkSubmit() {
+    const text = document.getElementById(`content`).value
+    console.log(text);
+
+    jumbleServices.createCheckSubmit()
   }
 
 

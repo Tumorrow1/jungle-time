@@ -33,7 +33,11 @@
           <div>
             <span id="body"></span>
           </div>
-          <textarea name="content" id="jumbleContent"></textarea>
+          <div class="d-none" id="jumbleContent">
+            <textarea id="content" name="content"></textarea>
+            <button onclick="app.jumbleController.checkSubmit()" class="btn btn-success">submit</button>
+          </div>
+
         </div>
 
         <div class="col-6">
